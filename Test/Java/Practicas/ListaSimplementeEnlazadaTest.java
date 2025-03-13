@@ -44,11 +44,7 @@ class ListaSimplementeEnlazadaTest {
         assertEquals(2, iterador.next());
         assertEquals(3, iterador.next());
         assertFalse(iterador.hasNext());
-        List<Integer> resultado = new ArrayList<>();
-        while(iterador.hasNext()) {
-            resultado.add(iterador.next());
-        }
-        assertEquals(java.util.List.of(10,30), resultado);
+
     }
 
     @Test
