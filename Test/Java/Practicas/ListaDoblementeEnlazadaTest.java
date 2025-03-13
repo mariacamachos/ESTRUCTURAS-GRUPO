@@ -3,9 +3,9 @@ package Practicas;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+//Se validan las funcionalidades de agregar, eliminar, obtener iteradores y contar elementos.
 class ListaDoblementeEnlazadaTest {
-
+    //Prueba el metodo add() verificando que los elementos se agregan correctamente a la lista.
     @Test
     void add() {
         ListaDoblementeEnlazada<Integer> lista = new ListaDoblementeEnlazada<>();
@@ -21,7 +21,7 @@ class ListaDoblementeEnlazadaTest {
         lista.add(20);
         assertEquals(2, lista.getNumElementos());
     }
-
+    //Prueba el metodo delete() verificando la eliminación de elementos en diferentes posiciones.
     @Test
     void delete() {
         ListaDoblementeEnlazada<Integer> lista = new ListaDoblementeEnlazada<>();
@@ -49,7 +49,7 @@ class ListaDoblementeEnlazadaTest {
         assertTrue(lista.delete(30));
         assertEquals(0, lista.getNumElementos());
     }
-
+    //Prueba el metodo getIterador() asegurando que el iterador recorre los elementos en el orden correcto.
     @Test
     void getIterador() {
         ListaDoblementeEnlazada<Integer> lista = new ListaDoblementeEnlazada<>();
@@ -69,7 +69,7 @@ class ListaDoblementeEnlazadaTest {
         assertEquals(30, iterador.next());
         assertFalse(iterador.hasNext());
     }
-
+    //Prueba el méetodo getNumElementos() verificando que devuelve el número correcto de elementos.
     @Test
     void getNumElementos() {
         ListaDoblementeEnlazada<String> lista = new ListaDoblementeEnlazada<>();
