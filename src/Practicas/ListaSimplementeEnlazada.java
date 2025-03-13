@@ -71,4 +71,9 @@ public class ListaSimplementeEnlazada <T> implements Lista<T> {
     public int getNumElementos() {
         return numElementos;
     }
+
+    /**Metodo que me devuelve el elemento de la cabeza de la lista**/
+    public Elemento<T> getCabeza() {
+        return cabeza;
+    }
 }
