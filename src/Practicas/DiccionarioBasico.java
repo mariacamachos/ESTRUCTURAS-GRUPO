@@ -1,24 +1,25 @@
 package Practicas;
 
-public class DiccionarioBasico<K, V> {
+public class DiccionarioBasico<K, V> implements Diccionario<K, V> {
     private ListaDoblementeEnlazada<ElementoDiccionario<K, V>> lista;
 
     public DiccionarioBasico() {
         lista = new ListaDoblementeEnlazada<>();
     }
 
-    public void add(K clave, V valor) {
+    public boolean add(K clave, V valor) {
         // Verificamos si la clave ya existe
         ElementoDiccionario<K, V> actual = lista.getIterador().next();
         while (actual != null) {
             if (actual.clave.equals(clave)) {
                 actual.valor = valor;  // Si existe, actualizamos el valor
-                return;
+                return true;
             }
             actual = actual.siguiente;
         }
         // Si no existe, añadimos un nuevo elemento
         lista.add(new ElementoDiccionario<>(clave, valor));
+        return true;
     }
 
     public V get(K clave) {
@@ -48,6 +49,11 @@ public class DiccionarioBasico<K, V> {
             actual = actual.siguiente;
         }
         return false;
+    }
+
+    @Override
+    public Iterador<ElementoDiccionario<K, V>> getIterador() {
+        return new IteradorDiccionario<>(lista.cabeza.dato,this.lista);
     }
 
     public int getNumElementos() {
