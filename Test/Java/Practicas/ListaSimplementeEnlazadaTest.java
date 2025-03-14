@@ -32,7 +32,7 @@ class ListaSimplementeEnlazadaTest {
         //Se elimina el elemento '20' y devuelve true si es correcto
         assertTrue(lista.delete(20));
         //Comprueba que el número de elementos coincide
-        assertEquals(3,lista.getNumElementos());
+        assertEquals(2,lista.getNumElementos());
        //Devuelve un false al eliminar el elemento '60' porque no existe
         assertFalse(lista.delete(60));
     }

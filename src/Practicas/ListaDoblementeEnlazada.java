@@ -4,7 +4,7 @@ package Practicas;
 class ListaDoblementeEnlazada<T> implements Lista<T> {
     /**Zona de atributos**/
     //Primer nodo de la lista (inicio de la secuencia de elementos).
-    private ElementoDoble<T> cabeza;
+    public ElementoDoble<T> cabeza;
     //Último nodo de la lista (final de la secuencia de elementos).
     private ElementoDoble<T> cola;
     //Contador que almacena el número de elementos en la lista.
@@ -15,6 +15,7 @@ class ListaDoblementeEnlazada<T> implements Lista<T> {
         this.cola = null;
         this.numElementos = 0;
     }
+
     /**Zona de metodos**/
     //Agrega un nuevo elemento al final de la lista.
     @Override
