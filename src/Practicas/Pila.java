@@ -5,7 +5,7 @@ public class Pila<T> {
     protected ListaSimplementeEnlazada<T> lista;
     //creo el constructor Pila con una listaSE vacia
     public Pila() {
-        lista = new ListaSimplementeEnlazada<>(0, lista.getCabeza());
+        lista = new ListaSimplementeEnlazada<>(0, null);
     }
     //Este metodo sirve para agregar al inicio de la lista(arriba de la pila)
     public void push(T elemento) {
@@ -23,7 +23,7 @@ public class Pila<T> {
         //y luego lo borro
         T elemento = (T) lista.getCabeza();
         lista.delete(elemento);
-        return elemento;
+        return elemento ;
     }
     //me devuelve si la pila esta vacia comprobando si la lista por la
     //que esta formada la pila esta vacia o no, esto lo hago mirando

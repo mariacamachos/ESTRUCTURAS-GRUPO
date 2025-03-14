@@ -5,7 +5,7 @@ public class Cola<T> {
     private ListaSimplementeEnlazada<T> lista;
     //creo una listaSE vacia para el constructor de la cola
     public Cola() {
-        lista = new ListaSimplementeEnlazada<T>(0, lista.getCabeza());
+        lista = new ListaSimplementeEnlazada<T>(0, null);
     }
     //este metodo agrega elementos al final de la lista, es decir, al final
     //de la cola con el metodo add de las listasSE
